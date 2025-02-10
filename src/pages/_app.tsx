@@ -1,16 +1,11 @@
 import "@/styles/globals.css";
+import Layout from "@/components/feat/Layout";
 import type { AppProps } from "next/app";
-import { Inter } from "next/font/google";
-
-const interSans = Inter({
-  variable: "--inter",
-  subsets: ["latin"],
-});
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={interSans.variable}>
+    <Layout>
       <Component {...pageProps} />
-    </main>
+    </Layout>
   );
 }
