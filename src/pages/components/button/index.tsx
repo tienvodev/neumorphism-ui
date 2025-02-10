@@ -16,7 +16,7 @@ export default function ButtonPage() {
           },
         ]}
         title="Button"
-        description="A button component."
+        description="Buttons help people take actions, such as sending an email, sharing a document, or liking a comment."
       />
     </div>
   );

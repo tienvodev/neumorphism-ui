@@ -6,6 +6,8 @@ export default function IconButtonPage() {
   return (
     <ComponentStories
       component={IconButton}
+      title="IconButton"
+      description="Icon buttons help people take supplementary actions with a single tap."
       variants={[
         {
           children: <Gear />,
@@ -52,8 +54,6 @@ export default function IconButtonPage() {
           size: "small",
         },
       ]}
-      title="IconButton"
-      description="A IconButton component."
     />
   );
 }

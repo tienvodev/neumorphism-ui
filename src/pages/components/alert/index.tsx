@@ -25,7 +25,7 @@ export default function AlertPage() {
           },
         ]}
         title="Alert"
-        description="An alert component."
+        description="Alerts display brief messages for the user without interrupting their use of the app."
       />
     </div>
   );

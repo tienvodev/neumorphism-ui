@@ -32,7 +32,7 @@ export default function InputPage() {
         },
       ]}
       title="Input"
-      description="An input component."
+      description="Inputs allow users to enter text into a UI. They typically appear in forms and dialogs."
     />
   );
 }

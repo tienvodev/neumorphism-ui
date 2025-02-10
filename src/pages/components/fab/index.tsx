@@ -7,6 +7,7 @@ export default function FabStories() {
     <ComponentStories
       component={Fab}
       title="Fab"
+      description="FABs help people take primary actions. They’re used to represent the most important action on a screen."
       variants={[
         {
           children: <MagnifyingGlass />,

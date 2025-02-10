@@ -48,6 +48,10 @@
   color: white;
 }
 
+.active:hover {
+  background: hsl(220 90% 45%);
+}
+
 .content {
   flex-grow: 1;
   padding: 2rem;

@@ -29,6 +29,10 @@ export default function Layout({ children }: LayoutProps) {
       label: "Fab",
       href: "/components/fab",
     },
+    {
+      label: "Text",
+      href: "/components/text",
+    },
   ];
   return (
     <div className={clsx(interSans.variable, styles.layout)}>
