@@ -1,6 +1,5 @@
 import ComponentStories from "@/components/feat/ComponentStories";
 import Text from "@/components/ui/Text";
-import { ChatCircle, MagnifyingGlass, Plus } from "@phosphor-icons/react";
 
 export default function TextStories() {
   return (
