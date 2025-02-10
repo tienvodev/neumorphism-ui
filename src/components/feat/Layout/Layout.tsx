@@ -15,43 +15,28 @@ const interSans = Inter({
 });
 
 export default function Layout({ children }: LayoutProps) {
-  const router = useRouter(); // Get current path
+  const router = useRouter();
 
   const componentItems = [
     { label: "Button", href: "/components/button" },
     { label: "Alert", href: "/components/alert" },
     { label: "Input", href: "/components/input" },
+    {
+      label: "IconButton",
+      href: "/components/icon-button",
+    },
   ];
   return (
     <div className={clsx(interSans.variable, styles.layout)}>
-      <nav className={styles.sidebar}>
-        <div className={styles.logo}>My UI Kit</div>
-
-        {/* <h3 className={styles.sectionTitle}>Styles</h3>
-        <ul className={styles.navList}>
-          {navItems.map(({ label, href }) => (
-            <li key={href} className={styles.navItem}>
-              <Link
-                href={href}
-                className={`${styles.navLink} ${
-                  router.pathname === href ? styles.active : ""
-                }`}
-              >
-                {label}
-              </Link>
-            </li>
-          ))}
-        </ul> */}
-
-        <h3 className={styles.sectionTitle}>Components</h3>
+      <nav className={styles.header}>
         <ul className={styles.navList}>
           {componentItems.map(({ label, href }) => (
             <li key={href} className={styles.navItem}>
               <Link
                 href={href}
-                className={`${styles.navLink} ${
-                  router.pathname === href ? styles.active : ""
-                }`}
+                className={clsx(styles.navLink, {
+                  [styles.active]: router.pathname === href,
+                })}
               >
                 {label}
               </Link>
@@ -59,7 +44,6 @@ export default function Layout({ children }: LayoutProps) {
           ))}
         </ul>
       </nav>
-
       <main className={styles.content}>{children}</main>
     </div>
   );

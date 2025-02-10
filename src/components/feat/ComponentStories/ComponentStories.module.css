@@ -24,4 +24,7 @@
   padding: 1rem;
   border: 1px solid hsl(0 0% 80%);
   border-radius: 6px;
+  /* center content */
+  display: grid;
+  place-content: center;
 }
