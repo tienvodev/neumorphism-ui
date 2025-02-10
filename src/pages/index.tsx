@@ -1,21 +1,11 @@
-import ComponentStories from "@/components/feat/ComponentStories";
-import Button from "@/components/ui/Button";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 export default function Home() {
-  return (
-    <ComponentStories
-      component={Button}
-      variants={[
-        {
-          children: "Label",
-        },
-        {
-          children: "Label",
-          glow: true,
-        },
-      ]}
-      title="Button"
-      description="A button component."
-    />
-  );
+  const router = useRouter();
+  useEffect(() => {
+    router.push("/components/button");
+  }, [router]);
+
+  return null;
 }
