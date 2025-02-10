@@ -1,136 +1,136 @@
 .Button {
-    --_shape_corner: var(--shape-corner-medium);
-    --_min-block-size: 2.5rem; /* 40px; */
-    --_padding-inline: 1rem; /* 16px; */
-    --_bg-clr: hsl(var(--clr-surface) / 1);
+  --_shape_corner: var(--shape-corner-medium);
+  --_min-block-size: 2.5rem; /* 40px; */
+  --_padding-inline: 1rem; /* 16px; */
+  --_bg-clr: hsl(var(--clr-surface) / 1);
 
-    --_glow-inset: 8px;
-    --_glow-spread: 8px;
-    --_glow-clr-start: hsl(var(--clr-glow) / 0.5);
-    --_glow-clr-end: hsl(var(--clr-glow) / 0.5);
-    --_glow-focused-spread: 5px;
+  --_glow-inset: 8px;
+  --_glow-spread: 8px;
+  --_glow-clr-start: hsl(var(--clr-glow) / 0.5);
+  --_glow-clr-end: hsl(var(--clr-glow) / 0.5);
+  --_glow-focused-spread: 5px;
 
-    --_text-clr: hsl(var(--clr-on-surface) / 1);
-    --_text-clr-disabled: hsl(var(--clr-on-surface-demphasized) / 1);
-    --_text-font: var(--typescale-level-4-font);
-    --_text-size: var(--typescale-level-4-size);
-    --_text-weight: var(--typescale-level-4-weight);
-    --_text-line-height: var(--typescale-level-4-line-height);
-    --_text-letter-spacing: var(--typescale-level-4-tracking);
+  --_text-clr: hsl(var(--clr-on-surface) / 1);
+  --_text-clr-disabled: hsl(var(--clr-on-surface-demphasized) / 1);
+  --_text-font: var(--typescale-level-4-font);
+  --_text-size: var(--typescale-level-4-size);
+  --_text-weight: var(--typescale-level-4-weight);
+  --_text-line-height: var(--typescale-level-4-line-height);
+  --_text-letter-spacing: var(--typescale-level-4-tracking);
 
-    --_neumorphic-layer-elevated-blur: 2px;
-    --_neumorphic-layer-elevated: var(--elevation-elevated-tablet);
-    --_neumorphic-layer-depressed: var(--elevation-depressed-tablet);
-    --_neumorphic-layer-depressed-blur: 0px;
-    --_neumorphic-layer-box-shadow: var(--_neumorphic-layer-elevated);
-    --_neumorphic-layer-blur: var(--_neumorphic-layer-elevated-blur);
-    --_neumorphic-layer-hovered-blur: 0px;
+  --_neumorphic-layer-elevated-blur: 2px;
+  --_neumorphic-layer-elevated: var(--elevation-elevated-tablet);
+  --_neumorphic-layer-depressed: var(--elevation-depressed-tablet);
+  --_neumorphic-layer-depressed-blur: 0px;
+  --_neumorphic-layer-box-shadow: var(--_neumorphic-layer-elevated);
+  --_neumorphic-layer-blur: var(--_neumorphic-layer-elevated-blur);
+  --_neumorphic-layer-hovered-blur: 0px;
 }
 
 @property --angle {
-    syntax: '<angle>';
-    initial-value: 0deg;
-    inherits: false;
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
 }
 
 @keyframes glow-spin {
-    100% {
-        --angle: 360deg;
-    }
+  100% {
+    --angle: 360deg;
+  }
 }
 
 .Button {
-    display: inline-grid;
-    place-content: center;
-    min-block-size: var(--_min-block-size);
-    padding-inline: var(--_padding-inline);
-    border-radius: var(--_shape_corner);
-    border: none;
-    outline: none;
+  display: inline-grid;
+  place-content: center;
+  min-block-size: var(--_min-block-size);
+  padding-inline: var(--_padding-inline);
+  border-radius: var(--_shape_corner);
+  border: none;
+  outline: none;
+  position: relative;
+  cursor: pointer;
+  background-color: var(--_bg-clr);
+
+  .NeumorphicLayer {
+    /* Elevated level 7*/
+    border-radius: inherit;
+    position: absolute;
+    inset: 0;
+    background-color: inherit;
+    box-shadow: var(--_neumorphic-layer-box-shadow);
+    filter: blur(var(--_neumorphic-layer-blur));
+
+    transition-property: filter, box-shadow;
+    transition-timing-function: var(--motion-easing-standard-decelerate);
+    transition-duration: var(--motion-duration-short-4);
+    border: 0.1px solid hsl(var(--clr-surface) / 1);
+  }
+
+  .Glow {
+    position: absolute;
+    inset: calc(-1 * var(--_glow-inset));
+    background-image: conic-gradient(
+      from var(--angle),
+      transparent,
+      var(--_glow-clr-start) 13%,
+      var(--_glow-clr-end) 32%,
+      transparent 50%
+    );
+    filter: blur(var(--_glow-spread));
+    border-radius: calc(var(--_shape_corner) + var(--_glow-inset));
+
+    animation-name: glow-spin;
+    animation-duration: calc(var(--motion-duration-extra-long-4) * 5);
+    animation-timing-function: var(--motion-easing-linear);
+    animation-iteration-count: infinite;
+  }
+
+  .Label {
     position: relative;
-    cursor: pointer;
-    background-color: var(--_bg-clr);
-
-    .NeumorphicLayer {
-        /* Elevated level 7*/
-        border-radius: inherit;
-        position: absolute;
-        inset: 0;
-        background-color: inherit;
-        box-shadow: var(--_neumorphic-layer-box-shadow);
-        /* filter: blur(var(--_neumorphic-layer-blur)); */
-
-        transition-property: filter, box-shadow;
-        transition-timing-function: var(--motion-easing-standard-decelerate);
-        transition-duration: var(--motion-duration-short-4);
-        border: 0.1px solid hsl(var(--clr-surface) / 1);
-    }
-
-    .Glow {
-        position: absolute;
-        inset: calc(-1 * var(--_glow-inset));
-        background-image: conic-gradient(
-            from var(--angle),
-            transparent,
-            var(--_glow-clr-start) 13%,
-            var(--_glow-clr-end) 32%,
-            transparent 50%
-        );
-        filter: blur(var(--_glow-spread));
-        border-radius: calc(var(--_shape_corner) + var(--_glow-inset));
-
-        animation-name: glow-spin;
-        animation-duration: calc(var(--motion-duration-extra-long-4) * 5);
-        animation-timing-function: var(--motion-easing-linear);
-        animation-iteration-count: infinite;
-    }
-
-    .Label {
-        position: relative;
-        color: var(--_text-clr);
-        font-family: var(--_text-font);
-        font-size: var(--_text-size);
-        font-weight: var(--_text-weight);
-        line-height: var(--_text-line-height);
-        letter-spacing: var(--_text-letter-spacing);
-    }
+    color: var(--_text-clr);
+    font-family: var(--_text-font);
+    font-size: var(--_text-size);
+    font-weight: var(--_text-weight);
+    line-height: var(--_text-line-height);
+    letter-spacing: var(--_text-letter-spacing);
+  }
 }
 
 .Button:hover:not(:focus) {
-    --_neumorphic-layer-blur: var(--_neumorphic-layer-hovered-blur);
+  --_neumorphic-layer-blur: var(--_neumorphic-layer-hovered-blur);
 }
 
 .Button:is(:active, :focus) {
-    --_neumorphic-layer-box-shadow: var(--_neumorphic-layer-depressed);
-    --_neumorphic-layer-blur: var(--_neumorphic-layer-depressed-blur);
-    --_glow-spread: var(--_glow-focused-spread);
+  --_neumorphic-layer-box-shadow: var(--_neumorphic-layer-depressed);
+  --_neumorphic-layer-blur: var(--_neumorphic-layer-depressed-blur);
+  --_glow-spread: var(--_glow-focused-spread);
 }
 
 .Button:disabled,
 .Button[disabled] {
-    pointer-events: none;
+  pointer-events: none;
 
-    --_text-clr: var(--_text-clr-disabled);
+  --_text-clr: var(--_text-clr-disabled);
 
-    .Glow {
-        display: none;
-    }
+  .Glow {
+    display: none;
+  }
 }
 
 @media (width < 600px) {
-    .Button {
-        --_min-block-size: 32px;
-        --_neumorphic-layer-elevated: var(--elevation-elevated-mobile);
-        --_neumorphic-layer-depressed: var(--elevation-depressed-mobile);
-    }
+  .Button {
+    --_min-block-size: 32px;
+    --_neumorphic-layer-elevated: var(--elevation-elevated-mobile);
+    --_neumorphic-layer-depressed: var(--elevation-depressed-mobile);
+  }
 }
 
 /* hide blur effect on IOS */
 
 @supports (-webkit-filter: blur(1px)) or (filter: blur(1px)) {
-    .Button {
-        .NeumorphicLayer {
-            filter: none;
-        }
+  .Button {
+    .NeumorphicLayer {
+      filter: none;
     }
+  }
 }
