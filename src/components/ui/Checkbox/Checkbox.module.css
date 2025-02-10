@@ -1,0 +1,13 @@
+.Checkbox {
+    accent-color: hsl(var(--clr-on-surface));
+
+    block-size: 16px;
+    inline-size: 16px;
+}
+
+@media (width > 600px) {
+    .Checkbox {
+        block-size: 20px;
+        inline-size: 20px;
+    }
+}

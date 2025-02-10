@@ -1,0 +1,60 @@
+.Modal[open] {
+    border-radius: var(--shape-corner-large);
+    inline-size: 90vw;
+    max-inline-size: 450px;
+    max-block-size: 90dvh;
+    padding: 16px;
+    display: grid;
+    gap: 16px;
+    overflow: auto;
+    border: none;
+}
+
+.Modal[open]::before {
+    content: '';
+    border-radius: inherit;
+    position: absolute;
+    inset: 0;
+    box-shadow: var(--elevation-modal);
+    filter: blur(2px);
+    background-color: hsl(var(--clr-surface) / 1);
+}
+
+.Modal::backdrop {
+    background-color: hsl(var(--clr-surface-inverse) / 0.6);
+}
+
+.Title {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    text-align: center;
+    position: relative;
+    color: hsl(var(--clr-on-surface) / 1);
+
+    font-family: var(--typescale-level-2-font);
+    font-weight: var(--typescale-level-2-weight);
+    font-size: var(--typescale-level-2-size);
+    letter-spacing: var(--typescale-level-2-tracking);
+    line-height: var(--typescale-level-2-line-height);
+}
+
+.Description {
+    font-weight: 500;
+    color: hsl(var(--clr-on-surface) / 1);
+    position: relative;
+}
+
+.Actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding-block-start: 16px;
+    position: relative;
+}
+
+.CloseIconButton {
+    position: absolute;
+    inset-inline-end: 10px;
+    inset-block-start: 10px;
+    color: hsl(var(--clr-on-surface) / 1);
+}

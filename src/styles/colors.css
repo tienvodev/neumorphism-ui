@@ -1,0 +1,42 @@
+:root {
+    --clr-glow-start: 347 100% 79%;
+    --clr-glow-end: 301 100% 67%;
+    --clr-glow: 337 100% 77%;
+
+    --clr-error: 13 80% 59%;
+    --clr-on-error: 0 0 100%;
+
+    --clr-warning: 37 92% 57%;
+    --clr-on-warning: 0 0 100%;
+
+    --clr-success: 122 40% 49%;
+    --clr-on-success: 0 0 100%;
+
+    --clr-surface: 0 0 94%;
+    --clr-on-surface: 0 0 40%;
+    --clr-on-surface-emphasized: 0 0 29%;
+    --clr-on-surface-demphasized: 0 0 72%;
+    --clr-on-surface-icon-inactive: 0 0 4% / 0.3;
+    --clr-on-surface-text-inactive: 0 0 54% / 0.5;
+    --clr-on-surface-stroke-inactive: 0 0% 67% / 0.3;
+
+    --clr-surface-inverse: 0 0 40%;
+    --clr-on-surface-inverse: 122 40% 49%;
+
+    --clr-surface-container: 0 0 90%;
+    --clr-surface-container-higher: 0 0% 85%;
+
+    --clr-shadow-light: 0 0% 100%;
+    --clr-shadow-dark: 0 0% 85%;
+    --clr-shadow-modal: 0 0% 57%;
+    --clr-caret: 304 99% 42%;
+
+    --clr-black: 0 0 0;
+    --clr-white: 0 0 100%;
+}
+
+body,
+#__next {
+    background-color: hsl(var(--clr-surface) / 1);
+    color: hsl(var(--clr-on-surface) / 1);
+}

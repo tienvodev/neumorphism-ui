@@ -1,0 +1,46 @@
+.LoadingSpinner {
+    display: grid;
+    place-content: center;
+    place-items: center;
+    border: none;
+    background: transparent;
+    color: hsl(0, 0%, 90%);
+    outline: none;
+
+    gap: 1rem;
+    .LoadingIndicator {
+        max-inline-size: 300px;
+    }
+
+    .LoadingIndicator > * {
+        block-size: 100%;
+        inline-size: 100%;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    .Message {
+        animation-name: fadeIn;
+        animation-duration: var(--motion-duration-extra-long-4);
+        animation-timing-function: var(--motion-easing-emphasized);
+        animation-iteration-count: infinite;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

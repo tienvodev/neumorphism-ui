@@ -1,0 +1,111 @@
+.Alert {
+    --_text-clr: var(--clr-on-surface);
+    --_icon-clr: var(--clr-on-surface-inverse);
+    --_icon-container-clr: var(--clr-surface-inverse);
+    --_icon-container-size: 130px;
+    --_icon-size: 65px;
+    --_gap: 35px;
+    --_animation-duration: calc(var(--motion-duration-long-4) * 2);
+}
+
+.Alert {
+    display: grid;
+    place-content: center;
+    justify-items: center;
+    color: hsl(var(--_text-clr));
+    gap: var(--_gap);
+    position: relative;
+
+    .IconContainer {
+        display: grid;
+        place-content: center;
+        justify-items: center;
+        block-size: var(--_icon-container-size);
+        inline-size: var(--_icon-container-size);
+        border-radius: 50%;
+    }
+
+    .IconContainer > * {
+        block-size: 100%;
+        inline-size: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .Message {
+        text-align: center;
+        white-space: pre-wrap;
+
+        animation-name: rise-up;
+        animation-duration: var(--_animation-duration);
+        animation-timing-function: var(--motion-easing-decelerate);
+        animation-fill-mode: forwards;
+    }
+}
+
+.Alert[data-type='success'] {
+    --_text-clr: var(--clr-success);
+    --_icon-clr: var(--clr-on-success);
+    --_icon-container-clr: var(--clr-success);
+}
+
+.Alert[data-type='error'] {
+    --_text-clr: var(--clr-error);
+    --_icon-clr: var(--clr-on-error);
+    --_icon-container-clr: var(--clr-error);
+}
+
+.Alert[data-type='warning'] {
+    --_text-clr: var(--clr-warning);
+    --_icon-clr: var(--clr-on-warning);
+    --_icon-container-clr: var(--clr-warning);
+}
+
+.Alert[data-type='info'] {
+    --_text-clr: var(--clr-info);
+    --_icon-clr: var(--clr-on-info);
+    --_icon-container-clr: var(--clr-info);
+}
+
+.Confetti {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.Icon {
+    position: relative;
+}
+
+@media (width < 600px) {
+    .Alert {
+        --_icon-container-size: 97.5px;
+        --_icon-size: 45px;
+        --_gap: 20px;
+    }
+}
+
+@keyframes roll-in-left {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes rise-up {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

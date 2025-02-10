@@ -1,0 +1,53 @@
+.TextField {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .Hidden {
+        display: none;
+    }
+
+    .ClearButton {
+        position: absolute;
+        inset-inline-end: 8px;
+        overflow: hidden;
+    }
+
+    .SupportingText {
+        position: absolute;
+        inset-block-end: -24px;
+        text-align: center;
+        inset-inline: 0;
+        /* trucate with ellipses if it's longer than one line*/
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        color: hsl(var(--clr-on-surface-demphasized) / 1);
+
+        /* fade in */
+
+        animation-name: fade-in;
+        animation-duration: var(--motion-duration-short-2);
+        animation-timing-function: var(--motion-easing-standard-accelerate);
+        animation-fill-mode: forwards;
+    }
+
+    &:has(.Input[aria-invalid='true']) {
+        .SupportingText {
+            color: hsl(var(--clr-error) / 1);
+        }
+    }
+
+    /* if input has no value hides the clear button */
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

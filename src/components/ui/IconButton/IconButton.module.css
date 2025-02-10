@@ -1,0 +1,155 @@
+.IconButton {
+    --_size: 28px;
+    --_shape-corner: var(--shape-corner-full);
+    --_padding: 6px;
+    --_icon-size: 24px;
+    --_ghost-bg-clr: hsl(0 0% 90% / 1);
+    --_ghost-icon-clr: hsl(0 0% 40% / 1);
+    --_filled-bg-clr: hsla(0, 0%, 40%, 1);
+    --_filled-icon-clr: hsl(0 0% 100% / 1);
+    --_bg-clr: var(--_ghost-bg-clr);
+    --_icon-clr: var(--_ghost-icon-clr);
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateY(2px);
+    }
+    50% {
+        transform: rotateZ(-12.5deg);
+    }
+    75% {
+        transform: rotateZ(12.5deg);
+    }
+    100% {
+        transform: translateY(0) rotateZ(0deg);
+    }
+}
+
+.IconButton {
+    display: inline-grid;
+    place-content: center;
+    border-radius: var(--_shape-corner);
+    padding: var(--_padding);
+
+    border: none;
+    background-color: var(--_bg-clr);
+    cursor: pointer;
+
+    .Icon {
+        color: var(--_icon-clr);
+        block-size: var(--_icon-size);
+        inline-size: var(--_icon-size);
+    }
+
+    .Icon > * {
+        block-size: 100%;
+        inline-size: 100%;
+        object-fit: contain;
+        object-position: center;
+    }
+}
+
+.IconButton[data-size='small'] {
+    --_size: 28px;
+    --_icon-size: 12px;
+}
+
+.IconButton[data-size='medium'] {
+    --_size: 36px;
+    --_icon-size: 18px;
+}
+
+.IconButton {
+    transition-property: background-color;
+    transition-timing-function: var(--motion-easing-standard-decelerate);
+    transition-duration: var(--motion-duration-short-4);
+
+    .Icon {
+        transition-property: color;
+        transition-timing-function: var(--motion-easing-standard-decelerate);
+        transition-duration: var(--motion-duration-short-4);
+    }
+}
+
+.IconButton:hover {
+    .Icon {
+        animation-name: shake;
+        animation-timing-function: var(--motion-easing-emphasized-accelerate);
+        animation-duration: var(--motion-duration-long-2);
+    }
+}
+
+.IconButton:is(:focus, :active) {
+}
+
+.IconButton:disabled,
+.IconButton[disabled] {
+    pointer-events: none;
+
+    --_bg-clr: hsl(0 0% 90% / 1);
+    --_icon-clr: hsl(0 0% 72%);
+}
+
+.IconButton[data-variant='ghost'] {
+    --_bg-clr: var(--_ghost-bg-clr);
+    --_icon-clr: var(--_ghost-icon-clr);
+}
+
+.IconButton[data-variant='ghost']:hover {
+    --_bg-clr: hsl(0 0% 85% / 1);
+    --_icon-clr: hsl(0 0% 40% / 1);
+}
+
+.IconButton[data-variant='ghost']:is(:focus, :active) {
+    --_bg-clr: hsl(0 0% 90% / 1);
+    --_icon-clr: hsl(0 0% 40% / 1);
+}
+
+.IconButton[data-variant='ghost']:disabled,
+.IconButton[data-variant='ghost'][disabled] {
+    --_bg-clr: hsl(0 0% 90% / 1);
+    --_icon-clr: hsl(0 0% 72%);
+}
+
+.IconButton[data-variant='filled'] {
+    --_bg-clr: var(--_filled-bg-clr);
+    --_icon-clr: var(--_filled-icon-clr);
+}
+
+.IconButton[data-variant='filled']:hover {
+    --_bg-clr: hsl(0 0% 30% / 1);
+    --_icon-clr: hsl(0 0% 100% / 1);
+}
+
+.IconButton[data-variant='filled']:is(:focus, :active) {
+    --_bg-clr: hsl(0 0% 40% / 1);
+    --_icon-clr: hsl(0 0% 100% / 1);
+}
+
+.IconButton[data-variant='filled']:disabled,
+.IconButton[data-variant='filled'][disabled] {
+    --_bg-clr: hsl(0 0% 90% / 1);
+    --_icon-clr: hsl(0 0% 72%);
+}
+
+@media (width < 600px) {
+    .IconButton[data-size='small'] {
+        --_size: 28px;
+        --_icon-size: 12px;
+    }
+
+    .IconButton[data-size='medium'] {
+        --_size: 24px;
+        --_icon-size: 12px;
+    }
+}
+
+/* standard icon has no background color */
+.IconButton[data-variant='standard'] {
+    --_bg-clr: transparent;
+    --_icon-clr: var(--_ghost-icon-clr);
+}

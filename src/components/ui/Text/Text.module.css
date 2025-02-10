@@ -1,0 +1,140 @@
+.Text {
+    font-family: var(--_typescale-font);
+    font-weight: var(--_typescale-weight);
+    letter-spacing: var(--_typescale-tracking);
+    font-size: var(--_typescale-size);
+    line-height: var(--_typescale-line-height);
+}
+
+.Text[data-typescale='1'] {
+    --_typescale-font: var(--typescale-level-1-font);
+    --_typescale-weight: var(--typescale-level-1-weight);
+    --_typescale-tracking: var(--typescale-level-1-tracking);
+    --_typescale-size: var(--typescale-level-1-size);
+    --_typescale-line-height: var(--typescale-level-1-line-height);
+}
+
+.Text[data-typescale='2'] {
+    --_typescale-font: var(--typescale-level-2-font);
+    --_typescale-weight: var(--typescale-level-2-weight);
+    --_typescale-tracking: var(--typescale-level-2-tracking);
+    --_typescale-size: var(--typescale-level-2-size);
+    --_typescale-line-height: var(--typescale-level-2-line-height);
+}
+
+.Text[data-typescale='3'] {
+    --_typescale-font: var(--typescale-level-3-font);
+    --_typescale-weight: var(--typescale-level-3-weight);
+    --_typescale-tracking: var(--typescale-level-3-tracking);
+    --_typescale-size: var(--typescale-level-3-size);
+    --_typescale-line-height: var(--typescale-level-3-line-height);
+    text-align: center;
+}
+
+.Text[data-typescale='4'] {
+    --_typescale-font: var(--typescale-level-4-font);
+    --_typescale-weight: var(--typescale-level-4-weight);
+    --_typescale-tracking: var(--typescale-level-4-tracking);
+    --_typescale-size: var(--typescale-level-4-size);
+    --_typescale-line-height: var(--typescale-level-4-line-height);
+}
+
+.Text[data-typescale='5'] {
+    --_typescale-font: var(--typescale-level-5-font);
+    --_typescale-weight: var(--typescale-level-5-weight);
+    --_typescale-tracking: var(--typescale-level-5-tracking);
+    --_typescale-size: var(--typescale-level-5-size);
+    --_typescale-line-height: var(--typescale-level-5-line-height);
+}
+
+.Text[data-typescale='6'] {
+    --_typescale-font: var(--typescale-level-6-font);
+    --_typescale-weight: var(--typescale-level-6-weight);
+    --_typescale-tracking: var(--typescale-level-6-tracking);
+    --_typescale-size: var(--typescale-level-6-size);
+    --_typescale-line-height: var(--typescale-level-6-line-height);
+}
+
+.Text[data-typescale='7'] {
+    --_typescale-font: var(--typescale-level-7-font);
+    --_typescale-weight: var(--typescale-level-7-weight);
+    --_typescale-tracking: var(--typescale-level-7-tracking);
+    --_typescale-size: var(--typescale-level-7-size);
+    --_typescale-line-height: var(--typescale-level-7-line-height);
+}
+
+.Text[data-typescale='8'] {
+    --_typescale-font: var(--typescale-level-8-font);
+    --_typescale-weight: var(--typescale-level-8-weight);
+    --_typescale-tracking: var(--typescale-level-8-tracking);
+    --_typescale-size: var(--typescale-level-8-size);
+    --_typescale-line-height: var(--typescale-level-8-line-height);
+}
+
+.Text[data-typescale='9'] {
+    --_typescale-font: var(--typescale-level-9-font);
+    --_typescale-weight: var(--typescale-level-9-weight);
+    --_typescale-tracking: var(--typescale-level-9-tracking);
+    --_typescale-size: var(--typescale-level-9-size);
+    --_typescale-line-height: var(--typescale-level-9-line-height);
+}
+
+.Text[data-typescale='10'] {
+    --_typescale-font: var(--typescale-level-10-font);
+    --_typescale-weight: var(--typescale-level-10-weight);
+    --_typescale-tracking: var(--typescale-level-10-tracking);
+    --_typescale-size: var(--typescale-level-10-size);
+    --_typescale-line-height: var(--typescale-level-10-line-height);
+}
+
+.Text[data-typescale='11'] {
+    --_typescale-font: var(--typescale-level-11-font);
+    --_typescale-weight: var(--typescale-level-11-weight);
+    --_typescale-tracking: var(--typescale-level-11-tracking);
+    --_typescale-size: var(--typescale-level-11-size);
+    --_typescale-line-height: var(--typescale-level-11-line-height);
+}
+
+.Text[data-typescale='12'] {
+    --_typescale-font: var(--typescale-level-12-font);
+    --_typescale-weight: var(--typescale-level-12-weight);
+    --_typescale-tracking: var(--typescale-level-12-tracking);
+    --_typescale-size: var(--typescale-level-12-size);
+    --_typescale-line-height: var(--typescale-level-12-line-height);
+}
+
+.Text[data-typescale='13'] {
+    --_typescale-font: var(--typescale-level-13-font);
+    --_typescale-weight: var(--typescale-level-13-weight);
+    --_typescale-tracking: var(--typescale-level-13-tracking);
+    --_typescale-size: var(--typescale-level-13-size);
+    --_typescale-line-height: var(--typescale-level-13-line-height);
+}
+
+.Text[data-typescale='14'] {
+    --_typescale-font: var(--typescale-level-14-font);
+    --_typescale-weight: var(--typescale-level-14-weight);
+    --_typescale-tracking: var(--typescale-level-14-tracking);
+    --_typescale-size: var(--typescale-level-14-size);
+    --_typescale-line-height: var(--typescale-level-14-line-height);
+}
+
+.Text[data-typescale='15'] {
+    --_typescale-font: var(--typescale-level-15-font);
+    --_typescale-weight: var(--typescale-level-15-weight);
+    --_typescale-tracking: var(--typescale-level-15-tracking);
+    --_typescale-size: var(--typescale-level-15-size);
+    --_typescale-line-height: var(--typescale-level-15-line-height);
+}
+
+.Text[data-color='sucess'] {
+    color: hsl(var(--clr-success));
+}
+
+.Text[data-color='error'] {
+    color: hsl(var(--clr-error));
+}
+
+.Text[data-color='warning'] {
+    color: hsl(var(--clr-warning));
+}

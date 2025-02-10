@@ -1,0 +1,6 @@
+.MaxWidthWrapper {
+    max-inline-size: 820px;
+    block-size: 100%;
+    margin: 0 auto;
+    padding: 0 28px;
+}

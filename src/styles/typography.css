@@ -1,0 +1,243 @@
+:root {
+    --typeface-brand: 'Inter';
+    --typeface-plain: 'Inter';
+
+    --typeface-weight-light: 300;
+    --typeface-weight-regular: 400;
+    --typeface-weight-semi-bold: 600;
+    --typeface-weight-bold: 700;
+
+    --typescale-line-height: 1.5;
+    --typescale-tablet-tracking: 0.09em;
+    --typescale-mobile-tracking: 0.04em;
+}
+
+:root {
+    /* 1 - 60/150% . 9% - Bold */
+    --typescale-level-1-font: var(--typeface-brand);
+    --typescale-level-1-weight: var(--typeface-weight-bold);
+    --typescale-level-1-size: 3.5rem; /* 60px */
+    --typescale-level-1-tracking: var(--typescale-tablet-tracking);
+    --typescale-level-1-line-height: var(--typescale-line-height);
+
+    /* 2 - 24/150% . 9% - Bold */
+    --typescale-level-2-font: var(--typeface-brand);
+    --typescale-level-2-weight: var(--typeface-weight-bold);
+    --typescale-level-2-size: 1.5rem; /* 24px */
+    --typescale-level-2-tracking: var(--typescale-tablet-tracking);
+    --typescale-level-2-line-height: var(--typescale-line-height);
+
+    /* 3 - 24/150% . 9% - Semi Bold */
+    --typescale-level-3-font: var(--typeface-brand);
+    --typescale-level-3-weight: var(--typeface-weight-semi-bold);
+    --typescale-level-3-size: 1.5rem; /* 24px */
+    --typescale-level-3-tracking: var(--typescale-tablet-tracking);
+    --typescale-level-3-line-height: var(--typescale-line-height);
+
+    /* 4 - 20/150% . 9% - Bold */
+    --typescale-level-4-font: var(--typeface-brand);
+    --typescale-level-4-weight: var(--typeface-weight-bold);
+    --typescale-level-4-size: 1.25rem; /* 20px */
+    --typescale-level-4-tracking: var(--typescale-tablet-tracking);
+    --typescale-level-4-line-height: var(--typescale-line-height);
+
+    /* 5 - 18/150% . 9% - Bold */
+    --typescale-level-5-font: var(--typeface-plain);
+    --typescale-level-5-weight: var(--typeface-weight-bold);
+    --typescale-level-5-size: 1.125rem; /* 18px */
+    --typescale-level-5-tracking: var(--typescale-tablet-tracking);
+    --typescale-level-5-line-height: var(--typescale-line-height);
+
+    /* 6 - 18/150% . 9% - Semi Bold */
+    --typescale-level-6-font: var(--typeface-plain);
+    --typescale-level-6-weight: var(--typeface-weight-semi-bold);
+    --typescale-level-6-size: 1.125rem; /* 18px */
+    --typescale-level-6-tracking: var(--typescale-tablet-tracking);
+    --typescale-level-6-line-height: var(--typescale-line-height);
+
+    /* 7 - 18/150% . 9% - Regular */
+    --typescale-level-7-font: var(--typeface-plain);
+    --typescale-level-7-weight: var(--typeface-weight-regular);
+    --typescale-level-7-size: 1.125rem; /* 18px */
+    --typescale-level-7-tracking: var(--typescale-tablet-tracking);
+    --typescale-level-7-line-height: var(--typescale-line-height);
+
+    /* 8 - 16/150% . 9% - Bold */
+    --typescale-level-8-font: var(--typeface-plain);
+    --typescale-level-8-weight: var(--typeface-weight-bold);
+    --typescale-level-8-size: 1rem; /* 16px */
+    --typescale-level-8-tracking: var(--typescale-tablet-tracking);
+    --typescale-level-8-line-height: var(--typescale-line-height);
+
+    /* 9 - 16/150% . 9% - Semi Bold */
+    --typescale-level-9-font: var(--typeface-plain);
+    --typescale-level-9-weight: var(--typeface-weight-semi-bold);
+    --typescale-level-9-size: 1rem; /* 16px */
+    --typescale-level-9-tracking: var(--typescale-tablet-tracking);
+    --typescale-level-9-line-height: var(--typescale-line-height);
+
+    /* 10 - 16/150% . 9% - Regular */
+    --typescale-level-10-font: var(--typeface-plain);
+    --typescale-level-10-weight: var(--typeface-weight-regular);
+    --typescale-level-10-size: 1rem; /* 16px */
+    --typescale-level-10-tracking: var(--typescale-tablet-tracking);
+    --typescale-level-10-line-height: var(--typescale-line-height);
+
+    /* 11 - 16/150% . 9% - Light */
+    --typescale-level-11-font: var(--typeface-plain);
+    --typescale-level-11-weight: var(--typeface-weight-light);
+    --typescale-level-11-size: 1rem; /* 16px */
+    --typescale-level-11-tracking: var(--typescale-tablet-tracking);
+    --typescale-level-11-line-height: var(--typescale-line-height);
+
+    /* 12 - 14/150% . 9% - Bold */
+    --typescale-level-12-font: var(--typeface-plain);
+    --typescale-level-12-weight: var(--typeface-weight-bold);
+    --typescale-level-12-size: 0.875rem; /* 14px */
+    --typescale-level-12-tracking: var(--typescale-tablet-tracking);
+    --typescale-level-12-line-height: var(--typescale-line-height);
+
+    /* 13 - 12/150% . 9% - Semi Bold */
+    --typescale-level-13-font: var(--typeface-plain);
+    --typescale-level-13-weight: var(--typeface-weight-semi-bold);
+    --typescale-level-13-size: 0.75rem; /* 12px */
+    --typescale-level-13-tracking: var(--typescale-tablet-tracking);
+    --typescale-level-13-line-height: var(--typescale-line-height);
+
+    /* 14 - 12/150% . 9% - Regular */
+    --typescale-level-14-font: var(--typeface-plain);
+    --typescale-level-14-weight: var(--typeface-weight-regular);
+    --typescale-level-14-size: 0.75rem; /* 12px */
+    --typescale-level-14-tracking: var(--typescale-tablet-tracking);
+    --typescale-level-14-line-height: var(--typescale-line-height);
+
+    /* 15 - 10/150% .9% - Regular */
+    --typescale-level-15-font: var(--typeface-plain);
+    --typescale-level-15-weight: var(--typeface-weight-regular);
+    --typescale-level-15-size: 0.625rem; /* 10px */
+    --typescale-level-15-tracking: var(--typescale-tablet-tracking);
+    --typescale-level-15-line-height: var(--typescale-line-height);
+}
+
+@media (width < 600px) {
+    :root {
+        /* 1 - 32/150% . 6% - Bold */
+        --typescale-level-1-size: 2rem; /* 32px */
+        --typescale-level-1-tracking: var(--typescale-mobile-tracking);
+        --typescale-level-1-line-height: var(--typescale-line-height);
+        --typescale-level-1-font: var(--typeface-brand);
+        --typescale-level-1-weight: var(--typeface-weight-bold);
+
+        /* 2 - 16/150% . 6% - Bold */
+        --typescale-level-2-size: 1rem; /* 16px */
+        --typescale-level-2-tracking: var(--typescale-mobile-tracking);
+        --typescale-level-2-line-height: var(--typescale-line-height);
+        --typescale-level-2-font: var(--typeface-brand);
+        --typescale-level-2-weight: var(--typeface-weight-bold);
+
+        /* 3 - 16 /150% . 6% - Semi Bold */
+        --typescale-level-3-size: 1rem; /* 16px */
+        --typescale-level-3-tracking: var(--typescale-mobile-tracking);
+        --typescale-level-3-line-height: var(--typescale-line-height);
+        --typescale-level-3-font: var(--typeface-brand);
+        --typescale-level-3-weight: var(--typeface-weight-semi-bold);
+
+        /* 4 - 16/150% . 6% - Bold */
+        --typescale-level-4-size: 1rem; /* 16px */
+        --typescale-level-4-tracking: var(--typescale-mobile-tracking);
+        --typescale-level-4-line-height: var(--typescale-line-height);
+        --typescale-level-4-font: var(--typeface-brand);
+        --typescale-level-4-weight: var(--typeface-weight-bold);
+
+        /* 5 - 12/150% . 6% - Bold */
+        --typescale-level-5-size: 0.75rem; /* 12px */
+        --typescale-level-5-tracking: var(--typescale-mobile-tracking);
+        --typescale-level-5-line-height: var(--typescale-line-height);
+        --typescale-level-5-font: var(--typeface-brand);
+        --typescale-level-5-weight: var(--typeface-weight-bold);
+
+        /* 6 - 12/150% . 6% - Semi Bold */
+        --typescale-level-6-size: 0.75rem; /* 12px */
+        --typescale-level-6-tracking: var(--typescale-mobile-tracking);
+        --typescale-level-6-line-height: var(--typescale-line-height);
+        --typescale-level-6-font: var(--typeface-brand);
+        --typescale-level-6-weight: var(--typeface-weight-semi-bold);
+
+        /* 7 - 12/150% . 6% - Regular */
+        --typescale-level-7-size: 0.75rem; /* 12px */
+        --typescale-level-7-tracking: var(--typescale-mobile-tracking);
+        --typescale-level-7-line-height: var(--typescale-line-height);
+        --typescale-level-7-font: var(--typeface-brand);
+        --typescale-level-7-weight: var(--typeface-weight-regular);
+
+        /* 8 - 10/150% . 6% - Bold */
+        --typescale-level-8-size: 0.625rem; /* 10px */
+        --typescale-level-8-tracking: var(--typescale-mobile-tracking);
+        --typescale-level-8-line-height: var(--typescale-line-height);
+        --typescale-level-8-font: var(--typeface-brand);
+        --typescale-level-8-weight: var(--typeface-weight-bold);
+
+        /* 9 - 8/150% . 6% - Semi Bold */
+        --typescale-level-9-size: 0.5rem; /* 8px */
+        --typescale-level-9-tracking: var(--typescale-mobile-tracking);
+        --typescale-level-9-line-height: var(--typescale-line-height);
+        --typescale-level-9-font: var(--typeface-brand);
+        --typescale-level-9-weight: var(--typeface-weight-semi-bold);
+
+        /* 10 - 14/150% . 6% - Regular */
+        --typescale-level-10-size: 0.875rem; /* 14px */
+        --typescale-level-10-tracking: var(--typescale-mobile-tracking);
+        --typescale-level-10-line-height: var(--typescale-line-height);
+        --typescale-level-10-font: var(--typeface-brand);
+        --typescale-level-10-weight: var(--typeface-weight-regular);
+
+        /* 11 - 10/150% . 6% - Light */
+        --typescale-level-11-size: 0.625rem; /* 10px */
+        --typescale-level-11-tracking: var(--typescale-mobile-tracking);
+        --typescale-level-11-line-height: var(--typescale-line-height);
+        --typescale-level-11-font: var(--typeface-brand);
+        --typescale-level-11-weight: var(--typeface-weight-light);
+
+        /* 12 - 10/150% . 6% - Semi Bold */
+        --typescale-level-12-size: 0.625rem; /* 10px */
+        --typescale-level-12-tracking: var(--typescale-mobile-tracking);
+        --typescale-level-12-line-height: var(--typescale-line-height);
+        --typescale-level-12-font: var(--typeface-brand);
+        --typescale-level-12-weight: var(--typeface-weight-semi-bold);
+
+        /* 13 - 10/150% . 6% - Semi Bold */
+        --typescale-level-13-size: 0.625rem; /* 10px */
+        --typescale-level-13-tracking: var(--typescale-mobile-tracking);
+        --typescale-level-13-line-height: var(--typescale-line-height);
+        --typescale-level-13-font: var(--typeface-brand);
+        --typescale-level-13-weight: var(--typeface-weight-semi-bold);
+
+        /* 14 - 8/150% . 6% - Regular */
+        --typescale-level-14-size: 0.5rem; /* 8px */
+        --typescale-level-14-tracking: var(--typescale-mobile-tracking);
+        --typescale-level-14-line-height: var(--typescale-line-height);
+        --typescale-level-14-font: var(--typeface-brand);
+        --typescale-level-14-weight: var(--typeface-weight-regular);
+
+        /* 15 - 8/150% . 6% - Regular*/
+        --typescale-level-15-size: 0.5rem; /* 8px */
+        --typescale-level-15-tracking: var(--typescale-mobile-tracking);
+        --typescale-level-15-line-height: var(--typescale-line-height);
+        --typescale-level-15-font: var(--typeface-brand);
+        --typescale-level-15-weight: var(--typeface-weight-regular);
+    }
+}
+
+body {
+    --_typescale-font: var(--typescale-level-3-font);
+    --_typescale-weight: var(--typescale-level-3-weight);
+    --_typescale-tracking: var(--typescale-level-3-tracking);
+    --_typescale-size: var(--typescale-level-3-size);
+    --_typescale-line-height: var(--typescale-level-3-line-height);
+
+    font-family: var(--_typescale-font);
+    font-weight: var(--_typescale-weight);
+    letter-spacing: var(--_typescale-tracking);
+    font-size: var(--_typescale-size);
+    line-height: var(--_typescale-line-height);
+}
