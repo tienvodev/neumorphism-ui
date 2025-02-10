@@ -1,93 +1,93 @@
 .InputWrapper {
-    --_border-radius: var(--shape-corner-full);
-    --_padding-inline: 16px;
-    --_padding-block: 6px;
+  --_border-radius: var(--shape-corner-full);
+  --_padding-inline: 16px;
+  --_padding-block: 6px;
 
-    --_neumorphic-layer-bg-clr: hsl(var(--clr-surface) / 1);
-    --_neumorphic-layer-border-clr: hsl(var(--clr-white) / 1);
-    --_neumorphic-layer-depressed: var(--elevation-depressed-tablet);
-    --_neumorphic-layer-depressed-blur: 3.8px;
-    --_neumorphic-layer-depressed-default-blur: 3.8px;
-    --_neumorphic-layer-depressed-box-shadow: var(--_neumorphic-layer-depressed);
-    --_neumorphic-layer-focused-blur: 0px;
+  --_neumorphic-layer-bg-clr: hsl(var(--clr-surface) / 1);
+  --_neumorphic-layer-border-clr: hsl(var(--clr-white) / 1);
+  --_neumorphic-layer-depressed: var(--elevation-depressed-tablet);
+  --_neumorphic-layer-depressed-blur: 3.8px;
+  --_neumorphic-layer-depressed-default-blur: 3.8px;
+  --_neumorphic-layer-depressed-box-shadow: var(--_neumorphic-layer-depressed);
+  --_neumorphic-layer-focused-blur: 0px;
 
-    --_text-clr: hsl(0 0% 40% / 1);
-    --_caret-clr: hsl(304 99% 42% / 1);
-    --_placeholder-clr: hsl(0 0% 72% / 1);
-    --_text-clr-disabled: hsl(0 0% 72% / 1);
+  --_text-clr: hsl(0 0% 40% / 1);
+  --_caret-clr: hsl(304 99% 42% / 1);
+  --_placeholder-clr: hsl(0 0% 72% / 1);
+  --_text-clr-disabled: hsl(0 0% 72% / 1);
 
-    --_text-size: var(--typescale-level-4-size);
-    --_text-weight: var(--typescale-level-4-weight);
-    --_text-line-height: var(--typescale-level-4-line-height);
-    --_text-letter-spacing: var(--typescale-level-4-tracking);
-    --_text-font: var(--typescale-level-5-font);
+  --_text-size: var(--typescale-level-4-size);
+  --_text-weight: var(--typescale-level-4-weight);
+  --_text-line-height: var(--typescale-level-4-line-height);
+  --_text-letter-spacing: var(--typescale-level-4-tracking);
+  --_text-font: var(--typescale-level-5-font);
 }
 
 .InputWrapper {
-    display: inline-grid;
+  display: inline-grid;
 
-    place-content: center;
+  place-content: center;
+  position: relative;
+  border-radius: var(--_border-radius);
+  padding-inline: 32px;
+
+  .Input {
+    inline-size: 100%;
+    border: none;
     position: relative;
-    border-radius: var(--_border-radius);
-    padding-inline: 32px;
+    border-radius: inherit;
+    background: transparent;
+    outline: none;
+    padding-block: 6px;
+    text-align: center;
 
-    .Input {
-        min-inline-size: 200px;
-        border: none;
-        position: relative;
-        border-radius: inherit;
-        background: transparent;
-        outline: none;
-        padding-block: 6px;
-        text-align: center;
+    font-family: var(--_text-font);
+    font-size: var(--_text-size);
+    font-weight: var(--_text-weight);
+    line-height: var(--_text-line-height);
+    letter-spacing: var(--_text-letter-spacing);
 
-        font-family: var(--_text-font);
-        font-size: var(--_text-size);
-        font-weight: var(--_text-weight);
-        line-height: var(--_text-line-height);
-        letter-spacing: var(--_text-letter-spacing);
+    color: var(--_text-clr);
+    caret-color: var(--_caret-clr);
+  }
 
-        color: var(--_text-clr);
-        caret-color: var(--_caret-clr);
-    }
-
-    .Input::placeholder {
-        color: var(--_placeholder-clr);
-    }
+  .Input::placeholder {
+    color: var(--_placeholder-clr);
+  }
 }
 
 .InputWrapper::before {
-    content: '';
-    position: absolute;
-    border-radius: inherit;
-    border: 2px solid var(--_neumorphic-layer-border-clr);
-    inset: 0;
-    background: var(--_neumorphic-layer-bg-clr);
-    box-shadow: var(--_neumorphic-layer-depressed-box-shadow);
-    filter: blur(var(--_neumorphic-layer-depressed-blur));
+  content: "";
+  position: absolute;
+  border-radius: inherit;
+  border: 2px solid var(--_neumorphic-layer-border-clr);
+  inset: 0;
+  background: var(--_neumorphic-layer-bg-clr);
+  box-shadow: var(--_neumorphic-layer-depressed-box-shadow);
+  filter: blur(var(--_neumorphic-layer-depressed-blur));
 
-    transition-property: filter, box-shadow, border-color;
-    transition-timing-function: var(--motion-easing-standard-decelerate);
-    transition-duration: var(--motion-duration-short-4);
+  transition-property: filter, box-shadow, border-color;
+  transition-timing-function: var(--motion-easing-standard-decelerate);
+  transition-duration: var(--motion-duration-short-4);
 }
 .Input:focus::placeholder,
 .Input:focus::cue {
-    color: transparent;
+  color: transparent;
 }
 
 .Input:disabled {
-    color: var(--_text-clr-disabled);
+  color: var(--_text-clr-disabled);
 }
 
 .InputWrapper:focus-within::before {
-    --_neumorphic-layer-depressed-blur: 0px;
-    --_neumorphic-layer-border-clr: transparent;
+  --_neumorphic-layer-depressed-blur: 0px;
+  --_neumorphic-layer-border-clr: transparent;
 }
 
 .InputWrapper:has(.Input:invalid)::before {
-    --_neumorphic-layer-border-clr: hsl(var(--clr-error) / 1);
+  --_neumorphic-layer-border-clr: hsl(var(--clr-error) / 1);
 }
 
 .InputWrapper:has(.Input:disabled)::before {
-    --_neumorphic-layer-border-clr: hsl(var(--clr-surface-container) / 1);
+  --_neumorphic-layer-border-clr: hsl(var(--clr-surface-container) / 1);
 }
