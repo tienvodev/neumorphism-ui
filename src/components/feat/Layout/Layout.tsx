@@ -25,6 +25,10 @@ export default function Layout({ children }: LayoutProps) {
       label: "IconButton",
       href: "/components/icon-button",
     },
+    {
+      label: "Fab",
+      href: "/components/fab",
+    },
   ];
   return (
     <div className={clsx(interSans.variable, styles.layout)}>
