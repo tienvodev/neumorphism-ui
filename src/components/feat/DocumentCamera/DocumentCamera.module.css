@@ -54,8 +54,8 @@
 }
 
 .CaptureButton {
-  width: 72px;
-  height: 72px;
+  width: 64px;
+  height: 64px;
   background: white;
   color: black;
 }
@@ -73,6 +73,10 @@
   align-items: center;
   justify-content: center;
   z-index: 1;
+
+  @media (orientation: landscape) {
+    width: 60vmin;
+  }
 }
 
 .Corner {
@@ -154,10 +158,10 @@
 /* Guidance Text */
 .GuidanceText {
   position: absolute;
-  top: 100px;
+  top: 1rem;
   text-align: center;
   font-size: 12px;
-  max-width: 80%;
+  max-width: 70%;
   color: rgba(255, 255, 255, 0.8);
   background: rgba(0, 0, 0, 0.6);
   padding: 8px 12px;
@@ -168,6 +172,7 @@
 .ErrorMessage {
   position: absolute;
   top: 50%;
+  max-width: 70%;
   transform: translateY(-50%);
   text-align: center;
   font-size: 12px;

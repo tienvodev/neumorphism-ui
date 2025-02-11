@@ -115,8 +115,8 @@ export default function DocumentCamera({
         if (capturedImage) {
           handleRetake();
         } else {
-          onClose();
           stopCamera();
+          onClose();
         }
       }
     };
@@ -132,17 +132,23 @@ export default function DocumentCamera({
       {errorMessage && (
         <div className={styles.ErrorMessage}>{errorMessage}</div>
       )}
+
       <video
         ref={videoRef}
         autoPlay
         playsInline
         className={styles.VideoContainer}
       />
+      {!capturedImage && !errorMessage && (
+        <div className={styles.GuidanceText}>
+          Position your document within the frame for a clear capture.
+        </div>
+      )}
       <div className={styles.TopControls}>
         <button className={styles.IconButton} onClick={onClose}>
           <XIcon size={24} />
         </button>
-        {!capturedImage && (
+        {!capturedImage && !errorMessage && (
           <button className={styles.IconButton} onClick={toggleTorch}>
             {torchOn ? (
               <LightningIcon size={24} />
@@ -158,44 +164,42 @@ export default function DocumentCamera({
         <div className={`${styles.Corner} ${styles.BottomLeft}`} />
         <div className={`${styles.Corner} ${styles.BottomRight}`} />
       </div>
-      {!capturedImage && (
-        <div className={styles.GuidanceText}>
-          Position your document within the frame for a clear capture.
+
+      {!errorMessage && (
+        <div className={styles.BottomControls}>
+          {capturedImage ? (
+            <>
+              <button className={styles.IconButton} onClick={handleRetake}>
+                <XCircleIcon size={24} />
+              </button>
+              <button className={styles.IconButton} onClick={handleConfirm}>
+                <CheckIcon size={24} />
+              </button>
+            </>
+          ) : (
+            <>
+              <button className={styles.IconButton}>
+                <ImageIcon size={24} />
+              </button>
+              <button
+                className={clsx(styles.IconButton, styles.CaptureButton)}
+                onClick={captureImage}
+              >
+                <Camera size={24} />
+              </button>
+
+              <button
+                className={clsx(styles.IconButton, {
+                  [styles.Switching]: cameraSwitching,
+                })}
+                onClick={switchCamera}
+              >
+                <CameraRotateIcon size={24} />
+              </button>
+            </>
+          )}
         </div>
       )}
-      <div className={styles.BottomControls}>
-        {capturedImage ? (
-          <>
-            <button className={styles.IconButton} onClick={handleRetake}>
-              <XCircleIcon size={24} />
-            </button>
-            <button className={styles.IconButton} onClick={handleConfirm}>
-              <CheckIcon size={24} />
-            </button>
-          </>
-        ) : (
-          <>
-            <button className={styles.IconButton}>
-              <ImageIcon size={24} />
-            </button>
-            <button
-              className={clsx(styles.IconButton, styles.CaptureButton)}
-              onClick={captureImage}
-            >
-              <Camera size={24} />
-            </button>
-
-            <button
-              className={clsx(styles.IconButton, {
-                [styles.Switching]: cameraSwitching,
-              })}
-              onClick={switchCamera}
-            >
-              <CameraRotateIcon size={24} />
-            </button>
-          </>
-        )}
-      </div>
     </div>
   );
 }
