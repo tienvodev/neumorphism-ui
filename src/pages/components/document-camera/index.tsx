@@ -6,16 +6,13 @@ import Button from "@/components/ui/Button";
 type DocumentType = "Qr" | "Passport" | "ThaiId";
 
 export default function DocumentCameraDemo() {
-  const [open, setOpen] = useState(false);
   const [documentType, setDocumentType] = useState<DocumentType | null>(null);
 
   function handleOpen(type: DocumentType) {
     setDocumentType(type);
-    setOpen(true);
   }
 
   function handleClose() {
-    setOpen(false);
     setDocumentType(null);
   }
 
