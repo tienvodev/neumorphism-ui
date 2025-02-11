@@ -1,0 +1,8 @@
+/* Demo.module.css */
+
+.DemoContainer {
+  display: grid;
+
+  gap: 1rem;
+  padding: 2rem;
+}

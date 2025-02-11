@@ -33,6 +33,10 @@ export default function Layout({ children }: LayoutProps) {
       label: "Text",
       href: "/components/text",
     },
+    {
+      label: "Camera",
+      href: "/components/document-camera",
+    },
   ];
   return (
     <div className={clsx(interSans.variable, styles.layout)}>
