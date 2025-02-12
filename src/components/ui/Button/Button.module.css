@@ -58,8 +58,14 @@
     inset: 0;
     background-color: inherit;
     box-shadow: var(--_neumorphic-layer-box-shadow);
-    /* filter: blur(var(--_neumorphic-layer-blur));
-    -webkit-filter: blur(var(--_neumorphic-layer-blur)); */
+    filter: blur(var(--_neumorphic-layer-blur));
+    -webkit-filter: blur(var(--_neumorphic-layer-blur));
+    transform: translate3d(0, 0, 0);
+    -webkit-filter: blur(var(--_glow-spread));
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 
     transition-property: filter, box-shadow;
@@ -80,6 +86,10 @@
     );
     filter: blur(var(--_glow-spread));
     -webkit-filter: blur(var(--_glow-spread));
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     border-radius: calc(var(--_shape_corner) + var(--_glow-inset));
 
