@@ -2,7 +2,7 @@
   --_shape_corner: var(--shape-corner-medium);
   --_min-block-size: 2.5rem; /* 40px; */
   --_padding-inline: 1rem; /* 16px; */
-  --_bg-clr: hsl(var(--clr-surface) / 1);
+  --_bg-clr: hsl(0, 0%, 94%);
 
   --_glow-inset: 8px;
   --_glow-spread: 8px;
@@ -10,7 +10,7 @@
   --_glow-clr-end: hsl(var(--clr-glow) / 0.5);
   --_glow-focused-spread: 5px;
 
-  --_text-clr: hsl(var(--clr-on-surface) / 1);
+  --_text-clr: hsl(0, 0%, 40%);
   --_text-clr-disabled: hsl(var(--clr-on-surface-demphasized) / 1);
   --_text-font: var(--typescale-level-4-font);
   --_text-size: var(--typescale-level-4-size);
