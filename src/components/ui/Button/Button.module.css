@@ -58,7 +58,7 @@
     inset: 0;
     background-color: inherit;
     box-shadow: var(--_neumorphic-layer-box-shadow);
-    /* filter: blur(var(--_neumorphic-layer-blur)); */
+    filter: blur(var(--_neumorphic-layer-blur));
     -webkit-filter: blur(var(--_neumorphic-layer-blur));
     transform: translate3d(0, 0, 0);
     -webkit-filter: blur(var(--_glow-spread));
@@ -135,15 +135,5 @@
     --_min-block-size: 32px;
     --_neumorphic-layer-elevated: var(--elevation-elevated-mobile);
     --_neumorphic-layer-depressed: var(--elevation-depressed-mobile);
-  }
-}
-
-/* hide blur effect on IOS */
-
-@supports (-webkit-filter: blur(1px)) or (filter: blur(1px)) {
-  .Button {
-    .NeumorphicLayer {
-      filter: none;
-    }
   }
 }
