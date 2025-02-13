@@ -49,7 +49,7 @@
   outline: none;
   position: relative;
   cursor: pointer;
-  background-color: var(--_bg-clr);
+  background-color: hsl(0, 0%, 94%);
 
   .NeumorphicLayer {
     /* Elevated level 7*/

@@ -37,6 +37,6 @@
 
 body,
 #__next {
-    background-color: hsl(var(--clr-surface) / 1);
-    color: hsl(var(--clr-on-surface) / 1);
+    background-color: hsl(0 0 94%);
+    color: hsl(0 0 40%);
 }
