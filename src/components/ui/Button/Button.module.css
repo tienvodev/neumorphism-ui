@@ -73,8 +73,9 @@
     transparent 50%
   );
   filter: blur(var(--_glow-spread));
+  -webkit-filter: blur(var(--_glow-spread));
   /*remove the glass effect on safari ios*/
-  transform: translateZ(0);
+  transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
 
   border-radius: calc(var(--_shape_corner) + var(--_glow-inset));
