@@ -74,8 +74,10 @@
   );
   filter: blur(var(--_glow-spread));
   -webkit-filter: blur(var(--_glow-spread));
+  backdrop-filter: blur(0);
+  -webkit-backdrop-filter: blur(0);
   /*remove the glass effect on safari ios*/
-  transform: translate3d(0, 0, 0);
+  transform: translateZ(0);
   backface-visibility: hidden;
 
   border-radius: calc(var(--_shape_corner) + var(--_glow-inset));
