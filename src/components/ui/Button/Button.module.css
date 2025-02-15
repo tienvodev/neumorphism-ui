@@ -4,7 +4,7 @@
   --_padding-inline: 1rem; /* 16px; */
   --_bg-clr: hsl(0, 0%, 94%);
 
-  --_glow-inset: 8px;
+  --_glow-inset: 1px;
   --_glow-spread: 16px;
   --_glow-clr: #ff55fc;
   --_glow-focused-spread: 5px;
@@ -72,7 +72,11 @@
     var(--_glow-clr),
     transparent 50%
   );
-  /* filter: blur(var(--_glow-spread)); */
+  filter: blur(var(--_glow-spread));
+  /*remove the glass effect on safari ios*/
+  transform: translateZ(0);
+  backface-visibility: hidden;
+
   border-radius: calc(var(--_shape_corner) + var(--_glow-inset));
 
   animation-name: glow-spin;
@@ -82,12 +86,10 @@
   z-index: 0;
 }
 
-/* .GlowLayer::after {
+.GlowLayer::after {
   content: "";
   position: absolute;
-  inset: 0;
-  bacdfilter: blur(var(--_glow-spread));
-} */
+}
 
 .Label {
   position: relative;
