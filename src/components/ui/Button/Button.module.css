@@ -58,6 +58,7 @@
   transition-duration: var(--motion-duration-short-4);
   border: 0.1px solid hsl(var(--clr-surface) / 1);
   z-index: 1;
+  overflow: hidden;
 }
 
 .GlowLayer {
@@ -66,8 +67,9 @@
   background-image: conic-gradient(
     from var(--angle),
     transparent,
-    var(--_glow-clr) 13%,
-    var(--_glow-clr) 32%,
+    var(--_glow-clr),
+    var(--_glow-clr),
+    var(--_glow-clr),
     transparent 50%
   );
   filter: blur(var(--_glow-spread));
